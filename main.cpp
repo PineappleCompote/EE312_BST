@@ -46,14 +46,25 @@ int main() {
     print(bst.inOrderTraversal());
     cout << endl;
 
+    s = 10;//"tree";
+	cout << "Search for " << s << endl;
+	if(bst.isItemInTree(s))
+		cout << s << " found!\n";
+	else
+		cout << s << " NOT found!\n";
     cout << "Remove items " << endl;
     cout << "number of nodes in tree before delete is " << bst.countNodes() << endl;
-    s = 10;//"tree";
     bst.deleteItem(s);
     print(bst.postOrderTraversal());
     cout << endl;
     cout << "number of nodes in tree after delete is " << bst.countNodes() << endl;
     cout << endl;
+
+	cout << "Search for " << s << endl;
+	cout << s;
+	if(!bst.isItemInTree(s))
+		cout << " NOT";
+	cout << " found!\n";
 
 	bst.makeEmpty();
 
